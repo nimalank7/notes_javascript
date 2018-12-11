@@ -7,7 +7,7 @@
 
 function createsAnInstanceOfNotes() {
   var note = new Note("Hello");
-  assert.isTrue(Note.prototype.isPrototypeOf(note)) === true;
+  assert.isTrue(Note.prototype.isPrototypeOf(note) === true);
 };
 createsAnInstanceOfNotes();
 
@@ -15,7 +15,7 @@ createsAnInstanceOfNotes();
 
 function NoteReturnsText() {
   var note = new Note("Hello");
-  assert.isTrue(note.text) === "Hello";
+  assert.isTrue(note.text === "Hello");
 };
 NoteReturnsText();
 
@@ -23,6 +23,6 @@ NoteReturnsText();
 
 function MethodReturnsStoredTextInNotes() {
   var note = new Note("Hello");
-  assert.isTrue(note.display_text()) === "Hello";
+  assert.isTrue(note.display_text() === "Hello");
 };
 MethodReturnsStoredTextInNotes();

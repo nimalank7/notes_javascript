@@ -2,7 +2,7 @@
 
 function createsAnInstanceOfList() {
   var list = new List;
-  assert.isTrue(List.prototype.isPrototypeOf(list)) === true;
+  assert.isTrue(List.prototype.isPrototypeOf(list) === true);
 };
 createsAnInstanceOfList();
 
@@ -10,7 +10,7 @@ createsAnInstanceOfList();
 
 function StoresNotesInAnArray() {
   var list = new List;
-  assert.isTrue(list.notes) === [];
+  assert.isTrue(list.notes.length === 0);
 };
 StoresNotesInAnArray();
 
@@ -18,7 +18,7 @@ StoresNotesInAnArray();
 
 function ReturnsStoredNotesInAnArray() {
   var list = new List;
-  assert.isTrue(list.stored_notes()) === [];
+  assert.isTrue(list.stored_notes().length === 0);
 };
 ReturnsStoredNotesInAnArray();
 
@@ -27,6 +27,6 @@ ReturnsStoredNotesInAnArray();
 function CreatesANoteInstance() {
   var list = new List;
   list.create_note("Hello")
-  assert.isTrue(list.stored_notes()[0]) === "Hello";
+  assert.isTrue(list.stored_notes()[0].text === "Hello");
 };
 CreatesANoteInstance();
